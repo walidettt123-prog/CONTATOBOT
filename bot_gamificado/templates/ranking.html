@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Ranking - ContratoBot{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">🏆 Ranking General</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <tr>
+            <th style="width: 80px;">#</th>
+            <th>Usuario</th>
+            <th>XP Total</th>
+            <th>Equipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td><strong>{{ loop.index }}</strong></td>
+            <td>{{ user.get('username') or user.get('name') or 'Usuario' }}</td>
+            <td><strong>{{ user.get('xp', 0) }} XP</strong></td>
+            <td>{{ user.get('team', 'Sin equipo') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if not users %}
+<div class="alert alert-info">
+    Aún no hay usuarios registrados.
+</div>
+{% endif %}
+{% endblock %}

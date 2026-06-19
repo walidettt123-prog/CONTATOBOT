@@ -1,0 +1,9 @@
+{
+  "daily_goal": 50,
+  "weekly_goal": 300,
+  "campana_emojis": 4,
+  "campana_bonus": 20,
+  "streak_bonus": 10,
+  "xp_light": 1,
+  "xp_bell": 2
+}

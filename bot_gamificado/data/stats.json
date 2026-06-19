@@ -1,0 +1,17 @@
+{
+  "1": {
+    "name": "Marc",
+    "xp": 520,
+    "team": "Norte"
+  },
+  "2": {
+    "name": "Walid",
+    "xp": 510,
+    "team": "Norte"
+  },
+  "3": {
+    "name": "David",
+    "xp": 500,
+    "team": "Sur"
+  }
+}

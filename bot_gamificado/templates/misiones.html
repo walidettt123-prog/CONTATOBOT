@@ -1,0 +1,20 @@
+    <tbody>
+        {% for mission in missions %}
+        <tr>
+            <td>{{ mission.name }}</td>
+            <td>{{ mission.type }}</td>
+            <td>{{ mission.goal }}</td>
+            <td>{{ mission.reward }} XP</td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" name="index" value="{{ loop.index0 }}">
+                    <button type="submit" class="btn btn-danger btn-sm" 
+                            onclick="return confirm('¿Eliminar esta misión?')">
+                        Eliminar
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>

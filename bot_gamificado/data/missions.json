@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Hacer CAMPANA luces",
+    "goal": 4,
+    "reward": 250,
+    "type": "light"
+  },
+  {
+    "name": "Conseguir una DUAL",
+    "goal": 1,
+    "reward": 50,
+    "type": "bell"
+  }
+]
