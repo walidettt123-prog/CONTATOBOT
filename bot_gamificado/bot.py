@@ -11,7 +11,7 @@ from telegram.ext import (
 )
 
 # ========================= CONFIG =========================
-TOKEN = "8823474990:AAHUaQm8lAa5lh15kEeLu1Bt3HtwtufyLko"  # ← Cambia esto
+TOKEN = ""  # ← Cambia esto
 
 DATA_DIR = Path("data")
 STATS_FILE = DATA_DIR / "stats.json"
